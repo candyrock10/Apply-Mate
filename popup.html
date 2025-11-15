@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>ApplyMate</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header><h2>ApplyMate</h2></header>
+
+    <section class="card">
+      <h3>Profile</h3>
+      <div class="row"><input id="firstName" placeholder="First name" /><input id="lastName" placeholder="Last name" /></div>
+      <div class="row"><input id="email" placeholder="Email" /><input id="phone" placeholder="Phone" /></div>
+      <div class="row"><input id="city" placeholder="City" /><input id="linkedin" placeholder="LinkedIn URL" /></div>
+      <div class="row"><input id="resumeNote" placeholder="Resume saved name (manual upload may be needed)" /></div>
+      <button id="saveProfile">Save profile</button>
+    </section>
+
+    <section class="card">
+      <h3>Filters</h3>
+      <div class="row"><input id="keywords" placeholder="Keywords (comma separated)" /></div>
+      <div class="row"><input id="locationFilter" placeholder="Location (optional)" /><input id="maxApplicants" placeholder="Max applicants" type="number" /></div>
+      <div class="row"><select id="postedWithin"><option value="24">24 hours</option><option value="72">3 days</option><option value="168">7 days</option></select>
+        <label><input id="onlyQuick" type="checkbox" checked /> Only Easy Apply</label></div>
+      <div class="row"><button id="scan">Scan LinkedIn</button> <button id="applySelected">Apply Selected</button></div>
+    </section>
+
+    <section class="card">
+      <h3>Results</h3>
+      <div id="status">Idle</div>
+      <div id="jobsContainer" class="jobs"></div>
+      <div id="log" class="log"></div>
+    </section>
+
+    <footer><small>Use responsibly. Some flows require manual steps (resume upload, captcha).</small></footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
